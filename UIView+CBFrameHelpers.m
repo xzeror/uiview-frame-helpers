@@ -199,12 +199,12 @@
 }
 
 - (id)insideRightEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(v.frame.size.width - spacing - self.frame.size.width,0);
+    CGPoint inTargetSpace =  CGPointMake(v.bounds.size.width - spacing - self.bounds.size.width,0);
     [self setX:[self.superview convertPoint:inTargetSpace fromView:v].x];
     return self;
 }
 - (id)insideBottomEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(0, v.frame.size.height - spacing - self.frame.size.height);
+    CGPoint inTargetSpace =  CGPointMake(0, v.bounds.size.height - spacing - self.bounds.size.height);
     [self setY:[self.superview convertPoint:inTargetSpace fromView:v].y];
     return self;
 }
@@ -235,25 +235,25 @@
 }
 
 - (id)outsideTopEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(0, -(spacing + self.frame.size.height));
+    CGPoint inTargetSpace =  CGPointMake(0, -(spacing + self.bounds.size.height));
     [self setY:[self.superview convertPoint:inTargetSpace fromView:v].y];
     return self;
 }
 
 - (id)outsideRightEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(v.frame.size.width + spacing,0);
+    CGPoint inTargetSpace =  CGPointMake(v.bounds.size.width + spacing,0);
     [self setX:[self.superview convertPoint:inTargetSpace fromView:v].x];
     return self;
 }
 
 - (id)outsideBottomEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(0, v.frame.size.height + spacing);
+    CGPoint inTargetSpace =  CGPointMake(0, v.bounds.size.height + spacing);
     [self setY:[self.superview convertPoint:inTargetSpace fromView:v].y];
     return self;
 }
 
 - (id)outsideLeftEdgeOf:(UIView *)v by:(CGFloat)spacing{
-    CGPoint inTargetSpace =  CGPointMake(-(spacing + self.frame.size.width), 0);
+    CGPoint inTargetSpace =  CGPointMake(-(spacing + self.bounds.size.width), 0);
     [self setX:[self.superview convertPoint:inTargetSpace fromView:v].x];
     return self;
 }
