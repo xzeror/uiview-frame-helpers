@@ -74,7 +74,7 @@
 - (CGFloat)aspectRatio;
 
 // rounding coords of view frame
-- (id)alignToPixel;
+- (id)makeFrameIntegral;
 
 - (BOOL)isInside:(UIView *)view;
 - (id)debug;

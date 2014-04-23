@@ -371,8 +371,8 @@
     return self;
 }
 
-- (id)alignToPixel{
-	self.frame = CGRectMake(roundf(self.x), roundf(self.y), roundf(self.width), roundf(self.height));
+- (id)makeFrameIntegral{
+	self.frame = CGRectIntegral(self.frame);
 	return self;
 }
 
